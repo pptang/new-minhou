@@ -1,0 +1,1 @@
+const aboutPage = `<div>About Page</div>`;
