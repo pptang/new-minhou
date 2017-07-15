@@ -259,3 +259,7 @@ body {
 	height: 400px;
 	width: 400px;
 }
+
+#reserveForm {
+	height: 600px;
+}
