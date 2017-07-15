@@ -1,0 +1,110 @@
+body {
+	margin: 0 auto;
+}
+
+#header {
+	background: linear-gradient(to right,#0C4B8E,#189BFA);
+	display: inline-block;
+	width: 100%;
+	height: 125px;
+	margin: 25px auto;
+	text-align: center;
+}
+
+.header-pic {
+	display: inline-block;
+	vertical-align: middle;
+	height: 100px;
+	margin-top: 10px;
+}
+
+
+#header>ul {
+	margin-top: 25px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#header>ul>li {
+	display: inline;
+	font-size: 18px;
+	color: white;
+	padding: 10px 10px;
+	font-weight: bold;
+}
+
+#header>ul>div>li {
+	font-size: 14px;
+	color: white;
+	list-style: none;
+	line-height: 35px;
+}
+
+.carousel_box {
+	width: 70%;
+	margin: 0 auto;
+	overflow: hidden;
+ 	background-size: cover;
+	background-position: center;
+}
+
+.about_us {
+	position: relative;
+	background-color: #1E88E5;
+	height: 200px;
+	color: white;
+	font-size: 20px;
+}
+
+.about_us:before {
+	content: '';
+	position: absolute;
+	width: 80%;
+	height: 20%;
+	left: 10%;
+	top: 35px;
+	opacity: 0.3;
+	background-color: white;
+}
+
+.about_us>h1 {
+	font-family: Georgia, Meiryo;
+	font-size: 35px;
+	width: 70%;
+	margin: 0 auto;
+	padding: 20px 0;
+	position: relative;
+}
+
+.about_us>h1>span {
+	font-style: italic;
+	font-size: 30px;
+}
+
+.about_us>p {
+	font-family: Microsoft Yahei;
+	height: 50%;
+	width: 70%;
+	line-height: 35px;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+
+
+/*#header>p {
+	font-size: 14px;
+	color: white;
+	position: absolute;
+	top: 75px;
+	right: 350px;
+}*/
+
+#mainContent {
+	height: 400px;
+}
+
+#googleMap {
+	height: 400px;
+	width: 400px;
+}

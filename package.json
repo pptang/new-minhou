@@ -1,0 +1,27 @@
+{
+  "name": "new-minhou",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "mongod --dbpath mongo_data --fork --logpath ./log/mongodb.log",
+    "start": "node server.js",
+    "stop": "mongo admin --eval 'db.shutdownServer()' > ./log/mongodb.log"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pptang/new-minhou.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pptang/new-minhou/issues"
+  },
+  "homepage": "https://github.com/pptang/new-minhou#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.2"
+  }
+}
