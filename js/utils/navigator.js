@@ -57,6 +57,28 @@ function goToReservePage() {
   });
 }
 
+function goToServicePage () {
+  window.location.hash = 'service';
+  document.querySelector('#mainContent').innerHTML = servicePage;
+  document.querySelector('#serviceContent').innerHTML = medicalSection;
+}
+
+function switchSection(sectionName) {
+  switch(sectionName) {
+    case 'medical':
+      document.querySelector('#serviceContent').innerHTML = medicalSection;
+      break;
+    case 'nursing':
+      document.querySelector('#serviceContent').innerHTML = nursingSection;
+      break;
+    case 'resource':
+      document.querySelector('#serviceContent').innerHTML = resourceSection;
+      break;
+    default:
+      document.querySelector('#serviceContent').innerHTML = medicalSection;
+  }
+}
+
 function navigate() {
   if (!window.location.hash) {
     goToHomePage();
@@ -70,6 +92,9 @@ function navigate() {
       break;
     case '#reserve':
       goToReservePage();
+      break;
+    case '#service':
+      goToServicePage();
       break;
   }
 }
