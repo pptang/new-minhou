@@ -28,6 +28,33 @@ function goToLocationPage() {
 function goToReservePage() {
   window.location.hash = 'reserve';
   document.querySelector('#mainContent').innerHTML = reservePage;
+
+  function sendReservation() {
+    axios.post('/reservations', {
+      applicantName: 'cool',
+      phoneNum: 'cool',
+      applicantGender: 'cool',
+      clientGender: 'cool',
+      clientAge: 12,
+      clientDisease: 'cool',
+      clientCurrentPlace: 'cool',
+      inquirySubject: 'cool',
+      specialTreatment: 'cool'
+    }).then(function (response) {
+        console.log(response);
+      }).catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  document.querySelector('#reserveForm').addEventListener('submit', function (e) {
+    const isFormValid = document.querySelector('#submitBtn').className.indexOf('disabled') === -1;
+    if (!isFormValid) {
+      alert('Validate fail');
+    } else {
+      sendReservation();
+    }
+  });
 }
 
 function navigate() {

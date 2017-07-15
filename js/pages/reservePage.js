@@ -20,35 +20,17 @@ const inquirySubject_4 = '復健內容';
 const inquirySubject_5 = '預約參觀';
 const inquirySubject_6 = '入住準備事項';
 
-function sendReservation() {
-  axios.post('/reservations', {
-    applicantName: 'cool',
-    phoneNum: 'cool',
-    applicantGender: 'cool',
-    clientGender: 'cool',
-    clientAge: 12,
-    clientDisease: 'cool',
-    clientCurrentPlace: 'cool',
-    inquirySubject: 'cool',
-    specialTreatment: 'cool'
-  })
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
-}
-
 const reservePage = `
+  <form id="reserveForm" role="form" data-toggle="validator">
   <div class="col-md-8 col-md-offset-2">
     <div class="form-group col-md-4">
-      <label for="applicantName">${applicantName}</label>
-      <input type="text" class="form-control" id="applicantName" placeholder="王小明">
+      <label for="applicantName">${applicantName}*</label>
+      <input required type="text" class="form-control" id="applicantName" placeholder="王小明">
     </div>
     <div class="form-group col-md-4">
       <label for="phoneNum">${phoneNum}</label>
-      <input type="tel" class="form-control" id="phoneNum" placeholder="09XXXXXXXX">
+      <input required type="tel" class="form-control" id="phoneNum" placeholder="09XXXXXXXX">
+      <div class="help-block with-errors"></div>
     </div>
     <div class="form-group col-md-4">
       <label>${applicantGender}</label><br/>
@@ -64,16 +46,20 @@ const reservePage = `
           女
         </label>
       </div>
+      <div class="help-block with-errors"></div>
     </div>
     <div class="form-group col-md-4">
 
       <input type="text" class="form-control" id="clientAge" placeholder="${clientAge}">
+      <div class="help-block with-errors"></div>
     </div>
     <div class="form-group col-md-4">
       <input type="text" class="form-control" id="clientDisease" placeholder="${clientDisease}">
+      <div class="help-block with-errors"></div>
     </div>
     <div class="form-group col-md-4">
       <input type="text" class="form-control" id="clientCurrentPlace" placeholder="${clientCurrentPlace}">
+      <div class="help-block with-errors"></div>
     </div>
     <div class="form-group col-md-8">
       <label>${specialTreatment}</label><br/>
@@ -113,7 +99,9 @@ const reservePage = `
           ${specialTreatment_6}
         </label>
       </div>
+      <div class="help-block with-errors"></div>
     </div>
+
     <div class="form-group col-md-4">
       <label>${clientGender}</label><br/>
       <div class="radio-inline">
@@ -128,6 +116,7 @@ const reservePage = `
           女
         </label>
       </div>
+      <div class="help-block with-errors"></div>
     </div>
      <div class="form-group col-md-12">
       <label>${inquirySubject}</label><br/>
@@ -167,15 +156,18 @@ const reservePage = `
           ${inquirySubject_6}
         </label>
       </div>
+      <div class="help-block with-errors"></div>
     </div>
     <div class="form-group col-md-6">
       <textarea class="form-control" rows="3" placeholder="備註..."></textarea>
+      <div class="help-block with-errors"></div>
     </div>
     <div class="form-group col-md-6">
-      <button type="button" class="btn btn-success col-md-4" onclick="sendReservation()">確定送出</button>
+      <button type="submit" id="submitBtn" class="btn btn-success col-md-4">確定送出</button>
       <button type="button" class="btn btn-danger col-md-4 col-md-offset-1">重寫</button>
     </div>
   </div>
+  </form>
 `;
 
 // XXX: CAPCHA
