@@ -251,3 +251,9 @@ body {
 #header > ul > li {
 	cursor: pointer;
 }
+
+#captcha {
+	background-color: #A51D22;
+	color: #FFF;
+	padding: 5px;
+}

@@ -38,10 +38,21 @@ function getCheckedBoxes(chkboxName) {
   return checkboxesChecked.length > 0 ? checkboxesChecked : null;
 }
 
+function setUpCaptcha() {
+  var a = Math.ceil(Math.random() * 9) + '';
+  var b = Math.ceil(Math.random() * 9) + '';
+  var c = Math.ceil(Math.random() * 9) + '';
+  var d = Math.ceil(Math.random() * 9) + '';
+  var e = Math.ceil(Math.random() * 9) + '';
+  var code = a + b + c + d + e;
+  document.getElementById('captchaValue').value = code;
+  document.getElementById('captcha').innerHTML = code;
+}
+
 function goToReservePage() {
   window.location.hash = 'reserve';
   document.querySelector('#mainContent').innerHTML = reservePage;
-
+  setUpCaptcha();
   function sendReservation() {
 
     axios({
@@ -71,8 +82,12 @@ function goToReservePage() {
   document.querySelector('#reserveForm').addEventListener('submit', function (e) {
     e.preventDefault();
     const isFormValid = document.querySelector('#submitBtn').className.indexOf('disabled') === -1;
+    const isCaptchaValid = document.getElementById('captchaInput').value === document.getElementById('captchaValue').value;
     if (!isFormValid) {
       alert('請再次確認表格資訊無誤！');
+    } else if(!isCaptchaValid) {
+      alert('驗證碼輸入錯誤！');
+      document.getElementById('captchaInput').value = '';
     } else {
       sendReservation();
     }

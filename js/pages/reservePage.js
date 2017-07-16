@@ -18,6 +18,7 @@ const inquirySubject_3 = '醫療護理';
 const inquirySubject_4 = '復健內容';
 const inquirySubject_5 = '預約參觀';
 const inquirySubject_6 = '入住準備事項';
+const enterCaptcha = '請輸入驗證碼';
 
 const reservePage = `
   <form id="reserveForm" role="form" data-toggle="validator">
@@ -137,6 +138,12 @@ const reservePage = `
       </div>
       <div class="form-group col-md-12">
         <textarea id="note" class="form-control" rows="3" placeholder="備註..."></textarea>
+      </div>
+      <div class="form-group col-md-4 col-md-offset-8">
+        <label for="captchaInput">${enterCaptcha}*：</label>
+        <span id="captcha"></span>
+        <input type="hidden" id="captchaValue" />
+        <input type="text" id="captchaInput" class="form-control" placeholder="請輸入5碼驗證碼"/>
       </div>
       <div class="form-group col-md-12 col-md-offset-4">
         <button type="submit" id="submitBtn" class="btn btn-success col-md-4">確定送出</button>
