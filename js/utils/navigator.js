@@ -25,46 +25,68 @@ function goToLocationPage() {
   marker.setMap(map);
 }
 
+// Pass the checkbox name to the function
+function getCheckedBoxes(chkboxName) {
+  var checkboxes = document.getElementsByName(chkboxName);
+  var checkboxesChecked = [];
+  for (var i=0; i<checkboxes.length; i++) {
+     if (checkboxes[i].checked) {
+        checkboxesChecked.push(checkboxes[i]);
+     }
+  }
+
+  return checkboxesChecked.length > 0 ? checkboxesChecked : null;
+}
+
 function goToReservePage() {
   window.location.hash = 'reserve';
   document.querySelector('#mainContent').innerHTML = reservePage;
 
   function sendReservation() {
-    axios.post('/reservations', {
-      applicantName: 'cool',
-      phoneNum: 'cool',
-      applicantGender: 'cool',
-      clientGender: 'cool',
-      clientAge: 12,
-      clientDisease: 'cool',
-      clientCurrentPlace: 'cool',
-      inquirySubject: 'cool',
-      specialTreatment: 'cool'
+
+    axios({
+      method: 'POST',
+      url: '/reservations',
+      data: {
+        applicantName: document.querySelector('#applicantName').value,
+        phoneNum: document.querySelector('#phoneNum').value,
+        clientGender: document.querySelector('input[name="clientGender"]').value,
+        clientAge: document.querySelector('#clientAge').value,
+        clientDisease: document.querySelector('#clientDisease').value,
+        clientCurrentPlace: document.querySelector('#clientCurrentPlace').value,
+        inquirySubject: getCheckedBoxes('inquirySubject'),
+        specialTreatment: getCheckedBoxes('specialTreatment'),
+        note: document.querySelector('#note').value
+      }
     }).then(function (response) {
-        console.log(response);
-      }).catch(function (error) {
-        console.log(error);
-      });
+      alert('申請表單已送出！將有專人主動聯絡您');
+      document.getElementById("reserveForm").reset();
+      console.log(response);
+    }).catch(function (error) {
+      alert('伺服器忙碌中，請您稍後再試！');
+      console.log(error);
+    });
   }
 
   document.querySelector('#reserveForm').addEventListener('submit', function (e) {
+    e.preventDefault();
     const isFormValid = document.querySelector('#submitBtn').className.indexOf('disabled') === -1;
     if (!isFormValid) {
-      alert('Validate fail');
+      alert('請再次確認表格資訊無誤！');
     } else {
       sendReservation();
     }
   });
 }
 
-function goToServicePage () {
+function goToServicePage() {
   window.location.hash = 'service';
   document.querySelector('#mainContent').innerHTML = servicePage;
   document.querySelector('#serviceContent').innerHTML = medicalSection;
 }
 
 function switchSection(sectionName) {
-  switch(sectionName) {
+  switch (sectionName) {
     case 'medical':
       document.querySelector('#serviceContent').innerHTML = medicalSection;
       break;
