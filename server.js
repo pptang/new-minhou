@@ -7,7 +7,8 @@ const Reservation = require('./models/reservation');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-mongoose.connect('mongodb://localhost/new_minhou');
+// mongoose.connect('mongodb://localhost/new_minhou');
+mongoose.connect('mongodb://bible:eddy0518@ds129183.mlab.com:29183/new-minhou');
 
 app.use(express.static(__dirname));
 app.use(bodyParser.json({limit: '5mb'}));
