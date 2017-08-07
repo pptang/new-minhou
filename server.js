@@ -21,7 +21,7 @@ app.get('/reservations', (req, res) => {
 });
 app.post('/reservations', (req, res) => {
   var reservation = new Reservation();
-  console.log('bible:::::', req);
+  console.log('req.body:::', req.body);
   reservation.applicantName = req.body.applicantName;
   reservation.phoneNum = req.body.phoneNum;
   reservation.applicantGender = req.body.applicantGender;
@@ -31,6 +31,7 @@ app.post('/reservations', (req, res) => {
   reservation.clientCurrentPlace = req.body.clientCurrentPlace;
   reservation.inquirySubject = req.body.inquirySubject;
   reservation.specialTreatment = req.body.specialTreatment;
+  reservation.note = req.body.note;
 
   reservation.save(function(err) {
     if (err) {

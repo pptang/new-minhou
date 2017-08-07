@@ -8,8 +8,9 @@ const ReservationSchema = new mongoose.Schema({
   clientAge: Number,
   clientDisease: String,
   clientCurrentPlace: String,
-  inquirySubject: String,
-  specialTreatment: String
+  inquirySubject: [String],
+  specialTreatment: [String],
+  note: String
 });
 
 module.exports = mongoose.model('Reservation', ReservationSchema);

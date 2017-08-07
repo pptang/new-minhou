@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 </head>
 
 <body>
@@ -19,11 +18,10 @@
     <ul>
       <li onclick="goToAboutPage()">關於我們</li>
       <li>最新消息</li>
-      <li>服務項目</li>
-      <li>生活花絮</li>
+      <li onclick="goToServicePage()">服務項目</li>
+      <li onclick="goToFeaturePage()">生活花絮</li>
       <li onclick="goToLocationPage()">地理位置</li>
       <li onclick="goToReservePage()">線上預約</li>
-      <li>訪客留言</li>
       <div>
         <li>明厚老人養護中心近淡水捷運站,提供中風、復健、洗腎、失智或其他慣性病患者照護服務。</li>
       </div>
@@ -31,18 +29,18 @@
   </div>
 
   <div id="mainContent"></div>
-  <div class="about_us">
-    <h1>關於明厚 <span>About Ming Hou</span></h1>
-    <p>我們自九十一年創立至今，創辦人自一群具有愛心的白衣天使，秉持著在醫院服務病患的專業及精神，決定在風景秀麗、依山傍水的淡水小鎮設立明厚老人養護中心以視如至親、人性的關懷之理念照護及關懷年邁的長者，</p>
-  </div>
+
   <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDAiGwhe1PZW00NKkFnlurgMNQYtVFVjh8"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
   <script src="js/pages/aboutPage.js"></script>
   <script src="js/pages/locationPage.js"></script>
   <script src="js/pages/homePage.js"></script>
   <script src="js/pages/reservePage.js"></script>
   <script src="js/pages/galleryPage.js"></script>
   <script src="js/pages/commentPage.js"></script>
+  <script src="js/pages/servicePage.js"></script>
+  <script src="js/pages/featurePage.js"></script>
   <script src="js/utils/navigator.js"></script>
 
 </body>
