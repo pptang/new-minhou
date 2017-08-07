@@ -116,6 +116,11 @@ function switchSection(sectionName) {
   }
 }
 
+function goToFeaturePage() {
+  window.location.hash = 'feature';
+  document.querySelector('#mainContent').innerHTML = featurePage;
+}
+
 function navigate() {
   if (!window.location.hash) {
     goToHomePage();
@@ -132,6 +137,9 @@ function navigate() {
       break;
     case '#service':
       goToServicePage();
+      break;
+    case '#feature':
+      goToFeaturePage();
       break;
   }
 }
