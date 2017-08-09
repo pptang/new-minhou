@@ -1,14 +1,15 @@
-body {
+#all_background {
 	margin: 0 auto;
+	background-color: #FFFFF0;
 }
 
 #header {
-	background: linear-gradient(to right,#0C4B8E,#189BFA);
+	background-color: #FFFFF0;
 	display: inline-block;
 	width: 100%;
 	height: 125px;
 	margin: 0px auto;
-	padding-top: 10px;
+	padding-top: 5px;
 	text-align: center;
 }
 
@@ -31,24 +32,25 @@ body {
 	font-size: 18px;
 	padding: 10px 10px;
 	font-weight: bold;
-	font-family: NSimSun;
+	font-family: Microsoft JhengHei;
 }
 
 #header>ul>li>a {
-	color: white;
+	color: black;
 	text-decoration: none;
 }
 
-#header>ul>li>a:hover {
-	color: #80DEEA;
+#header>ul>li:hover {
+	background-color: #FFFACD;
 	text-decoration: none;
-	transition: 0.5s;
+	transition: 0.7s;
 }
 
 
 #header>ul>div>li {
+	margin-top: 10px;
 	font-size: 15px;
-	color: white;
+	color: black;
 	list-style: none;
 	line-height: 35px;
 	font-family: NSimSun;
@@ -56,7 +58,7 @@ body {
 }
 
 .carousel_box {
-	background: linear-gradient(to right,#0C4B8E,#189BFA);
+	background-color: #FFFFF0;
 	overflow: hidden;
  	background-size: cover;
 	background-position: center;
@@ -77,21 +79,21 @@ body {
 
 .about_us {
 	position: relative;
-	background: linear-gradient(to right,#0C4B8E,#189BFA);/*#1E88E5;*/
+	background-color: #FFFFF0;
 	height: 200px;
-	color: white;
+	color: black;
 	font-size: 20px;
 }
 
 .about_us:before {
 	content: '';
 	position: absolute;
-	width: 80%;
-	height: 20%;
-	left: 10%;
-	top: 35px;
+	width: 70%;
+	height: 5%;
+	left: 15%;
+	top: 50px;
 	opacity: 0.3;
-	background-color: white;
+	background-color: #BDBDBD;
 }
 
 .about_us>h1 {
@@ -121,10 +123,12 @@ body {
 .latest_news {
 	background-color: white;
 	height: 200px;
-	background-color: #E0E0E0;/*只是隨便填色*/
+	background-color: #FFFFF0;
 }
 
 .service_items {
+	width: 70%;
+	background-color: #FFFFF0;
 	margin: 0 auto;
 	/*display: inline-block;*/
 }
@@ -146,20 +150,21 @@ body {
 	border-radius: 8px;
 	border-bottom: 3px solid gray;
 	font-size: 20px;
-	font-family: NSimSun;
+	font-family: Microsoft JhengHei;
+	background-color: #FFFFF0;
 }
 
 .item_link {
-	color: #1E88E5;
+	color: black;
 	text-decoration: none;
 }
 
 .item_list:hover, .item_link:hover {
 	text-decoration: none;
-	color: white;
-	background-color: #1E88E5;
-	text-shadow: 1px 1px 2px #E1F5FE;
+	color: black;
+	background-color: #FFFACD;
 	transition: 0.5s;
+	font-weight: blod;
 }
 
 .item_link:active {
@@ -167,6 +172,7 @@ body {
 }
 
 .service_title {
+	background-color: #FFFFF0;
 	margin: 20px auto;
 	display: table;
 }
@@ -203,8 +209,8 @@ body {
 	width: 100%;
 	height: 4px;
 	border-width: 1px 0;
-    	border-style: solid;
-    	border-color: #e3e3e3;
+    border-style: solid;
+    border-color: #e3e3e3;
 }
 
 .service_content {
@@ -232,6 +238,7 @@ body {
 
 .service_content>ol {
 	margin: 20px 0;
+	width: 95%;
 	vertical-align: middle;
 }
 
@@ -239,14 +246,14 @@ body {
 	line-height: 45px;
 	font-size: 18px;
 	font-family: Microsoft YaHei;
-	width: 95%;
+	width: 100%;
 	cursor: default;
 	/*Microsoft YaHei,STCaiyun*/
 }
 
 .service_content>ul {
 	margin: 20px 0;
-	width: 100%;
+	width: 95%;
 	vertical-align: middle;
 }
 
@@ -254,13 +261,15 @@ body {
 	line-height: 45px;
 	font-size: 18px;
 	font-family:  Microsoft YaHei;
-	width: 90%;
+	width: 100%;
 	cursor: default;
 }
 
 .life_title {
+	background-color: #FFFFF0;
 	margin: 40px auto;
 	display: table;
+
 }
 
 .life_title>h4 {
@@ -291,7 +300,7 @@ body {
 	content: '';
 	position: absolute;
 	top: calc(50% - 2px);
-	width: 500px;
+	width: 125%;
 	height: 4px;
 	border-width: 1px 0;
     border-style: solid;
@@ -299,13 +308,15 @@ body {
 }
 
 .life_all {
-	width: 85%;
+	width: 70%;
 	margin: 0 auto;
+	background-color: #FFFFF0;
 }
 
 .life_content {
 	position: relative;
 	text-align: center;
+
 }
 
 .life_pic {
@@ -394,13 +405,12 @@ body {
 	}
 
 	.service_content {
-		width: 65%;
-		margin-left: 500px;
+		margin-left: 400px;
 	}
 
 	.life_content {
 		display: inline-block;
-  		width: calc(100% / 4 - 25px * 2 / 4);
+  		width: calc(100% / 4 - 20px * 2 / 4);
   		height: 450px;
   		overflow: hidden;
   		background-size: cover;
@@ -424,11 +434,12 @@ body {
 
 	.service_content {
 		width: 95%;
+		height: 100%;
 	}
 
 	.life_content {
 		display: inline-block;
-  		width: calc(100% / 3 - 25px * 2 / 3);
+  		width: calc(100% / 3 - 10px * 2 / 3);
   		height: 400px;
   		overflow: hidden;
   		background-size: cover;
@@ -441,7 +452,7 @@ body {
 
 	.life_content {
 		display: inline-block;
-  		width: calc(100% / 2 - 25px * 2 / 2);
+  		width: calc(100% / 2 - 5px * 2 / 2);
   		height: 400px;
   		overflow: hidden;
   		background-size: cover;

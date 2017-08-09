@@ -100,7 +100,8 @@ function goToServicePage() {
   document.querySelector('#serviceContent').innerHTML = medicalSection;
 }
 
-function switchSection(sectionName) {
+function switchSection(event, sectionName) {
+  event.preventDefault();
   switch (sectionName) {
     case 'medical':
       document.querySelector('#serviceContent').innerHTML = medicalSection;
