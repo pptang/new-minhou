@@ -21,6 +21,9 @@ const inquirySubject_6 = '入住準備事項';
 const enterCaptcha = '請輸入驗證碼';
 
 const reservePage = `
+  <div class="reservation">
+    <h5>線上預約 <span>Reservation</span></h5>
+  </div>
   <form id="reserveForm" role="form" data-toggle="validator">
     <div class="col-md-6 col-md-offset-3">
       <div class="form-group col-md-6">

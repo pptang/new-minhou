@@ -11,7 +11,7 @@ const homePage = `
   	<!-- Wrapper for slides -->
   	  <div class="carousel-inner">
     	  <div class="item active">
-     		  <img class="item_pic" src="carepic1.jpg" alt="1">
+     		  <img class="item_pic" src="item_pic1.jpg" alt="1">
      		  <div class="carousel-caption">
        		  <h3>標題</h3>
        		  <p>內容</p>
@@ -19,7 +19,7 @@ const homePage = `
     	  </div>
 
         <div class="item">
-     		  <img class="item_pic" src="carepic2.jpg" alt="2">
+     		  <img class="item_pic" src="item_pic2.jpg" alt="2">
      		  <div class="carousel-caption">
        		  <h3>標題</h3>
        		  <p>內容</p>
@@ -27,7 +27,7 @@ const homePage = `
         </div>
 
         <div class="item">
-     		  <img class="item_pic" src="carepic3.jpg" alt="3">
+     		  <img class="item_pic" src="item_pic3.jpg" alt="3">
      		  <div class="carousel-caption">
        		  <h3>標題</h3>
        		  <p>內容</p>
