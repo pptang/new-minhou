@@ -15,16 +15,17 @@
   <!--頁首-->
   <div id="header">
     <a onclick="goToHomePage()"><img class="header-pic" src="LOGO-12.png"></a>
-    <ul>
-      <li onclick="goToAboutPage()">關於我們</li>
-      <li onclick="goToServicePage()">服務項目</li>
-      <li onclick="goToFeaturePage()">生活花絮</li>
-      <li onclick="goToLocationPage()">地理位置</li>
-      <li onclick="goToReservePage()">線上預約</li>
-      <div>
-        <li>新明厚老人養護中心近淡水捷運站,提供中風、復健、洗腎、失智或其他慣性病患者照護服務。</li>
-      </div>
-    </ul>
+    <a href="#" class="menu"><span>&equiv;</span> Menu</a>
+    <div class="header_box">
+      <ul class="header_list">
+        <li id="about" class="header_link" onclick="goToAboutPage()">關於我們</li>
+        <li id="service" class="header_link" onclick="goToServicePage()">服務項目</li>
+        <li id="feature" class="header_link" onclick="goToFeaturePage()">生活花絮</li>
+        <li id="location" class="header_link" onclick="goToLocationPage()">地理位置</li>
+        <li id="reserve" class="header_link" onclick="goToReservePage()">線上預約</li>
+      </ul>
+      <p class="header_font">新明厚老人長期照顧中心近淡水捷運站,提供中風、復健、洗腎、失智或其他慣性病患者照護服務。</p>
+    </div>
   </div>
 
   <div id="mainContent"></div>

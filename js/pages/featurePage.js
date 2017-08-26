@@ -1,6 +1,6 @@
 const featurePage = `
-  <div class="life_title">
-    <h4>生活花絮 <span>Life tidbits</span></h4>
+  <div class="aboutus_title">
+    <h1>生活花絮 <span>Life tidbits</span></h1>
   </div>
 
   <div class="life_all">

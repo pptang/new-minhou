@@ -1,13 +1,16 @@
 function goToHomePage() {
+  changeSelectedState('home');
   window.location.hash = '';
   document.querySelector('#mainContent').innerHTML = homePage;
 }
 function goToAboutPage() {
+  changeSelectedState('about');
   window.location.hash = 'about';
   document.querySelector('#mainContent').innerHTML = aboutPage;
 }
 
 function goToLocationPage() {
+  changeSelectedState('location');
   window.location.hash = 'location';
   document.querySelector('#mainContent').innerHTML = locationPage;
   var myCenter = new google.maps.LatLng(25.163549, 121.451950);
@@ -50,6 +53,7 @@ function setUpCaptcha() {
 }
 
 function goToReservePage() {
+  changeSelectedState('reserve');
   window.location.hash = 'reserve';
   document.querySelector('#mainContent').innerHTML = reservePage;
   setUpCaptcha();
@@ -95,6 +99,7 @@ function goToReservePage() {
 }
 
 function goToServicePage() {
+  changeSelectedState('service');
   window.location.hash = 'service';
   document.querySelector('#mainContent').innerHTML = servicePage;
   document.querySelector('#serviceContent').innerHTML = medicalSection;
@@ -102,6 +107,13 @@ function goToServicePage() {
 
 function switchSection(event, sectionName) {
   event.preventDefault();
+  $('.item_list').each(function() {
+    if ($(this)[0].id === sectionName) {
+      $(this).addClass('selected');
+    } else {
+      $(this).removeClass('selected');
+    }
+  });
   switch (sectionName) {
     case 'medical':
       document.querySelector('#serviceContent').innerHTML = medicalSection;
@@ -118,8 +130,19 @@ function switchSection(event, sectionName) {
 }
 
 function goToFeaturePage() {
+  changeSelectedState('feature');
   window.location.hash = 'feature';
   document.querySelector('#mainContent').innerHTML = featurePage;
+}
+
+function changeSelectedState(id) {
+  $('.header_link').each(function() {
+    if($(this)[0].id === id) {
+      $(this).addClass('selected');
+    } else {
+      $(this).removeClass('selected');
+    }
+  });
 }
 
 function navigate() {

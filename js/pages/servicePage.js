@@ -25,14 +25,14 @@ const resourceSection = `
   </ul>
 `;
 const servicePage = `
-  <div class="service_title">
-   <h2>服務項目 <span>Service Project</span></h2>
+  <div class="aboutus_title">
+   <h1>服務項目 <span>Service Project</span></h1>
   </div>
   <div class="service_items">
     <ul>
-    	<li class="item_list"><a class="item_link" href="#" onclick="switchSection(event, 'medical');">醫療與護理</a></li>
-    	<li class="item_list"><a class="item_link" href="#" onclick="switchSection(event, 'nursing');">照顧的方式</a></li>
-		  <li class="item_list"><a class="item_link" href="#" onclick="switchSection(event, 'resource');">資源的應用</a></li>
+    	<li id="medical" class="item_list selected" onclick="switchSection(event, 'medical');"><a class="item_link" href="#">醫療與護理</a></li>
+    	<li id="nursing" class="item_list" onclick="switchSection(event, 'nursing');"><a class="item_link" href="#">照顧的方式</a></li>
+		  <li id="resource" class="item_list" onclick="switchSection(event, 'resource');"><a class="item_link" href="#">資源的應用</a></li>
     </ul>
     <div id="serviceContent" class="service_content"></div>
   </div>

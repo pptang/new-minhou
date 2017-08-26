@@ -2,8 +2,8 @@
 	margin: 0 auto;
 	background-color: #FFFFF0;
 }
-
 #header {
+	position: relative;
 	background-color: #FFFFF0;
 	display: inline-block;
 	width: 100%;
@@ -12,64 +12,59 @@
 	padding-top: 5px;
 	text-align: center;
 }
-
 .header-pic {
+	display: inline;
+	vertical-align: middle;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.header_box {
 	display: inline-block;
 	vertical-align: middle;
-	height: 100px;
-	margin-top: 10px;
 }
-
-
-#header>ul {
+.header_list {
 	margin-top: 25px;
 	display: inline-block;
-	vertical-align: middle;
 }
-
-#header>ul>li {
+.header_list>li {
 	border: 1px solid #E0E0E0;
 	border-radius: 5px;
-	display: inline;
-	font-size: 18px;
-	padding: 5px 15px;
 	font-weight: bold;
 	font-family: Microsoft JhengHei;
+	cursor: pointer;
 }
-
-#header>ul>li>a {
+.header_list>li>a {
 	color: black;
 	text-decoration: none;
 }
-
-#header>ul>li:hover {
+.header_list>li:hover {
 	border: none;
 	background-color: #E0E0E0;
 	text-decoration: none;
 	transition: 0.7s;
 }
-
-#header>ul>div>li {
+.header_list>li.selected {
+	border: none;
+	background-color: #E0E0E0;
+	text-decoration: none;
+	transition: 0.7s;
+}
+.header_font {
 	margin-top: 10px;
-	font-size: 15px;
+	font-size: 14px;
 	color: black;
-	list-style: none;
-	line-height: 35px;
 	font-family: NSimSun;
 	cursor: default;
 }
-
 .carousel_box {
 	background-color: #FFFFF0;
 	overflow: hidden;
  	background-size: cover;
 	background-position: center;
 }
-
 #myCarousel {
 	margin: 25px auto;
 }
-
 .item:before {
 	content: '';
 	position: absolute;
@@ -78,39 +73,31 @@
 	opacity: 0.2;
 	background-color: #212121;
 }
-
 .aboutus_title {
 	background-color: #FFFFF0;
 	margin: 20px auto;
 	display: table;
 }
-
-.aboutus_title>h1 {
+.aboutus_title>h1,.service_title>h2,.life_title>h4,.location>h6 {
 	position: relative;
 	font-family: Georgia, SimSun;
-	font-size: 32px;
 	padding: 0 20px;
 	font-weight: 700;
 	cursor: pointer;
 }
-
-.aboutus_title>h1>span {
+.aboutus_title>h1>span,.service_title>h2>span,.life_title>h4>span,.location>h6>span {
 	font-style: italic;
 	font-size: 28px;
 	font-weight: 400;
 	cursor: pointer;
 }
-
-
-.aboutus_title>h1:after {
+.aboutus_title>h1:after,.service_title>h2:after,.life_title>h4:after,.location>h6:after {
 	left: 100%;
 }
-
-.aboutus_title>h1:before {
+.aboutus_title>h1:before,.service_title>h2:before,.life_title>h4:before,.location>h6:before {
 	right: 100%;
 }
-
-.aboutus_title>h1:after, .aboutus_title>h1:before {
+.aboutus_title>h1:after,.service_title>h2:after,.life_title>h4:after,.location>h6:after,.aboutus_title>h1:before,.service_title>h2:before,.life_title>h4:before,.location>h6:before {
 	content: '';
 	position: absolute;
 	top: calc(50% - 2px);
@@ -120,7 +107,6 @@
     border-style: solid;
     border-color: #e3e3e3;
 }
-
 .aboutus_content {
 	font-family: NSimSun;
 	height: 50%;
@@ -131,46 +117,39 @@
 	overflow: auto;
 	cursor: default;
 }
-
 .latest_news {
 	background-color: white;
 	height: 200px;
 	background-color: #FFFFF0;
 }
-
 .service_items {
 	width: 70%;
 	background-color: #FFFFF0;
 	margin: 0 auto;
 	/*display: inline-block;*/
 }
-
-
 .service_items>ul {
-	margin: 5% 5%;
+	margin: 5% 8%;
 	/*height: 250px;*/
 	width: 100%;
 	padding-left: 0;
 }
-
 .item_list {
 	line-height: 50px;
 	text-align: center;
 	list-style-type: none;
-	margin: 10px auto;
-	border-radius: 10px;
-	border-bottom: 3px solid gray;
-	font-size: 20px;
+	margin: 10px 3%;
+	border: 1px solid #E0E0E0;
+	border-radius: 5px;
+	font-size: 18px;
 	font-family: Microsoft JhengHei;
-	background-color: #FFFFF0;
+	cursor: pointer;
 }
-
 .item_link {
 	color: black;
 	text-decoration: none;
 	font-weight: bold;
 }
-
 .item_list:hover, .item_link:hover {
 	text-decoration: none;
 	color: black;
@@ -178,60 +157,30 @@
 	transition: 0.5s;
 }
 
-.item_link:active {
+.item_link:visited, .item_link:active, .item_link:focus {
 	text-decoration: none;
 }
 
+.item_link:active {
+	text-decoration: none;
+	background-color: #E0E0E0;
+}
+.item_list.selected {
+	text-decoration: none;
+	color: black;
+	background-color: #E0E0E0;
+}
 .service_title {
 	background-color: #FFFFF0;
 	margin: 20px auto;
 	display: table;
 }
-
-.service_title>h2 {
-	position: relative;
-	font-family: Georgia, SimSun;
-	font-size: 32px;
-	padding: 0 20px;
-	font-weight: 700;
-	cursor: pointer;
-}
-
-.service_title>h2>span {
-	font-style: italic;
-	font-size: 28px;
-	font-weight: 400;
-	cursor: pointer;
-}
-
-
-.service_title>h2:after {
-	left: 100%;
-}
-
-.service_title>h2:before {
-	right: 100%;
-}
-
-.service_title>h2:after, .service_title>h2:before {
-	content: '';
-	position: absolute;
-	top: calc(50% - 2px);
-	width: 100%;
-	height: 4px;
-	border-width: 1px 0;
-    border-style: solid;
-    border-color: #e3e3e3;
-}
-
 .service_content {
 	/*display: inline-block;*/
 	margin-top: 40px;
 	margin-bottom: 20px;
 	height: 500px;
 }
-
-
 .service_content>h3 {
 	font-family: Georgia, SimHei;
 	font-size: 25px;
@@ -239,20 +188,17 @@
 	letter-spacing: 3px;
 	cursor: pointer;
 }
-
 .service_content>h3>span {
 	font-size: 18px;
 	font-style: italic;
 	letter-spacing: 0;
 	cursor: pointer;
 }
-
 .service_content>ol {
 	margin: 20px 0;
 	width: 95%;
 	vertical-align: middle;
 }
-
 .service_content>ol>li {
 	line-height: 45px;
 	font-size: 18px;
@@ -261,13 +207,11 @@
 	cursor: default;
 	/*Microsoft YaHei,STCaiyun*/
 }
-
 .service_content>ul {
 	margin: 20px 0;
 	width: 95%;
 	vertical-align: middle;
 }
-
 .service_content>ul>li {
 	line-height: 45px;
 	font-size: 18px;
@@ -275,66 +219,29 @@
 	width: 100%;
 	cursor: default;
 }
-
 .life_title {
 	background-color: #FFFFF0;
 	margin: 40px auto;
 	display: table;
 
 }
-
-.life_title>h4 {
-	position: relative;
-	font-family: Georgia, SimSun;
-	cursor: pointer;
-	font-size: 32px;
-	padding: 0 20px;
-	font-weight: 700;
-}
-
-.life_title>h4>span {
-	font-style: italic;
-	font-size: 28px;
-	font-weight: 400;
-	cursor: pointer;
-}
-
-.life_title>h4:after {
-	left: 100%;
-}
-
-.life_title>h4:before {
-	right: 100%;
-}
-
 .life_title>h4:after, .life_title>h4:before {
-	content: '';
-	position: absolute;
-	top: calc(50% - 2px);
 	width: 125%;
 	height: 4px;
-	border-width: 1px 0;
-    border-style: solid;
-    border-color: #e3e3e3;
 }
-
 .life_all {
 	width: 70%;
 	margin: 0 auto;
 	background-color: #FFFFF0;
 }
-
 .life_content {
 	position: relative;
 	text-align: center;
-
 }
-
 .life_pic {
 	width: 100%;
 	height: 250px;
 }
-
 .life_pic_overlay {
 	position: absolute;
  	width: 100%;
@@ -344,12 +251,10 @@
   	transition: .3s ease;
   	background-color: #BDBDBD;
 }
-
 .life_content:hover .life_pic_overlay {
 	opacity: 1;
 	cursor: pointer;
 }
-
 .overlay_text {
 	position: absolute;
 	color: #FFFFF0;
@@ -362,7 +267,6 @@
   	transform: translate(-50%, -50%);
   	-ms-transform: translate(-50%, -50%);*/
 }
-
 .life_date {
 	padding-top: 15px;
   	font-family: Georgia;
@@ -372,12 +276,15 @@
   	vertical-align: middle;
   	cursor: default;
 }
-
+.life_content {
+	overflow: hidden;
+  	background-size: cover;
+  	background-position: center;
+}
 .life_content>h5>a {
 	color: black;
   	text-decoration: none;
 }
-
 .life_content>h5 {
 	font-family: monospace;
 	vertical-align: middle;
@@ -387,11 +294,9 @@
   	letter-spacing: 2px;
   	line-height: 150%;
 }
-
 .life_content>h5>a:hover {
 	text-decoration: none;
 }
-
 .life_font {
 	vertical-align: middle;
 	font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Arial,PingFang TC,Hiragino Sans GB,Microsoft Yahei,sans-serif;
@@ -399,170 +304,174 @@
   	font-size: 14px;
   	cursor: default;
 }
-
 .location {
 	background-color: #FFFFF0;
 	margin: 20px auto;
 	display: table;
 }
-
-.location>h5 {
-	position: relative;
-	font-family: Georgia, SimSun;
-	font-size: 32px;
-	padding: 0 20px;
-	font-weight: 700;
-	cursor: pointer;
-}
-
-.location>h5>span {
-	font-style: italic;
-	font-size: 28px;
-	font-weight: 400;
-	cursor: pointer;
-}
-
-.location>h5:after {
-	left: 100%;
-}
-
-.location>h5:before {
-	right: 100%;
-}
-
-.location>h5:after, .location>h5:before {
-	content: '';
-	position: absolute;
-	top: calc(50% - 2px);
+.location>h6:after, .location>h6:before {
 	width: 140%;
 	height: 4px;
-	border-width: 1px 0;
-    border-style: solid;
-    border-color: #e3e3e3;
 }
-
-.reservation {
-	background-color: #FFFFF0;
-	margin: 20px auto;
-	display: table;
-}
-
-.reservation>h5 {
-	position: relative;
-	font-family: Georgia, SimSun;
-	font-size: 32px;
-	padding: 0 20px;
-	font-weight: 700;
-	cursor: pointer;
-}
-
-.reservation>h5>span {
-	font-style: italic;
-	font-size: 28px;
-	font-weight: 400;
-	cursor: pointer;
-}
-
-.reservation>h5:after {
-	left: 100%;
-}
-
-.reservation>h5:before {
-	right: 100%;
-}
-
-.reservation>h5:after, .reservation>h5:before {
-	content: '';
-	position: absolute;
-	top: calc(50% - 2px);
-	width: 140%;
-	height: 4px;
-	border-width: 1px 0;
-    border-style: solid;
-    border-color: #e3e3e3;
-}
-
 @media screen and (min-width: 999px) {
+	#header {
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+	}
+	.header-pic {
+		height: 100px;
+	}
+	.header_list>li {
+		display: inline;
+		font-size: 16px;
+		padding: 5px 15px;
+	}
+	.aboutus_title>h1,.service_title>h2,.life_title>h4,.location>h6 {
+		font-size: 32px;
+	}
+	.aboutus_title>h1>span,.service_title>h2>span,.life_title>h4>span,.location>h6>span {
+		font-size: 28px;
+	}
+	.aboutus_title>h1:after,.aboutus_title>h1:before {
+		width: 80%;
+	}
+	.service_title>h2:after,.service_title>h2:before {
+		width: 120%;
+	}
+	.life_title>h4:after,.life_title>h4:before,.location>h6:after,.location>h6:before {
+		width: 160%;
+	}
+	.menu {
+		display: none;
+	}
 	#myCarousel {
 		width: 70%;
 	}
-
 	.item_pic {
 		height: 650px !important;
 		width: 100% !important;
 	}
-
 	.service_items>ul {
 		float: left;
-		width: 230px;
+		width: 200px;
 		display: inline-block;
 	}
-
 	.service_content {
-		margin-left: 400px;
+		margin-left: 350px;
 	}
-
 	.life_content {
 		display: inline-block;
   		width: calc(100% / 4 - 20px * 2 / 4);
   		height: 450px;
-  		overflow: hidden;
-  		background-size: cover;
-  		background-position: center;
 	}
-
 	.life_content:nth-child(2n) {
 		margin: 0 5px;
 	}
 }
 
 @media screen and (max-width: 1000px) {
+	.header-pic {
+		position: absolute;
+		height: 80px;
+		left: 13%;
+	}
+	.aboutus_title>h1,.service_title>h2,.life_title>h4,.location>h6 {
+		font-size: 28px;
+	}
+	.aboutus_title>h1>span,.service_title>h2>span,.life_title>h4>span,.location>h6>span {
+		font-size: 24px;
+	}
+	.aboutus_title>h1:after,.aboutus_title>h1:before {
+		width: 40%;
+	}
+	.service_title>h2:after,.service_title>h2:before {
+		width: 65%;
+	}
+	.life_title>h4:after,.life_title>h4:before,.location>h6:after,.location>h6:before {
+		width: 75%;
+	}
+	.menu {
+		position: absolute;
+		font-family: Georgia;
+		border: 1px solid #E0E0E0;
+		text-decoration: none;
+		top: 35%;
+		right: 10%;
+		color: black;
+		text-transform: uppercase;
+		font-size: 0.9em;
+		padding: 0.7em 1.2em;
+		border-radius: 4px;
+	}
+	.menu>span {
+		font-family: Georgia;
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+	.menu:hover,span:hover {
+		text-decoration: none;
+		color: black;
+		border: none;
+		background-color: #E0E0E0;
+		text-decoration: none;
+		transition: 0.7s;
+	}
+	.header_list {
+		position: absolute;
+		z-index: 1;
+		list-style-type: none;
+		top: 50%;
+		right: 10%;
+		width: 15%;
+	}
+	.header_list>li {
+		background-color: #FFFFF0;
+	}
+	.header_link {
+		display: block;
+		padding: 1em 0.5em;
+		margin-bottom: 1px;
+	}
+	.header_font {
+		margin-top: 110px;
+	}
 	.item_pic {
 		height: 400px !important;
 		width: 100% !important;
 	}
-
+	.carousel_box {
+		position: static;
+	}
 	#myCarousel {
 		width: 80%;
 	}
-
 	.service_content {
 		width: 95%;
 		height: 100%;
 	}
-
 	.item_list {
 		display: inline;
-		margin: auto 1.5%;
+		margin: auto 1.25%;
 		padding: 10px 20px;
+		font-size: 16px;
 	}
-
 	.life_content {
 		display: inline-block;
   		width: calc(100% / 3 - 10px * 2 / 3);
   		height: 350px;
-  		overflow: hidden;
-  		background-size: cover;
-  		background-position: center;
 	}
-
 	.life_pic {
 		height: 200px;
 	}
-
+	.life_pic_overlay {
+		height: 200px;
+	}
 }
 
 @media screen and (max-width: 600px) {
-
 	.life_content {
 		display: inline-block;
   		width: calc(100% / 2 - 5px * 2 / 2);
-  		height: 400px;
-  		overflow: hidden;
-  		background-size: cover;
-  		background-position: center;
-	}
-
+  	}
 }
 
 	/* border: 1px solid rgba(255, 0, 0, .3); */

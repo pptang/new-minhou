@@ -1,6 +1,6 @@
 const locationPage = `
-  <div class="location">
-    <h5>地理位置 <span>Location</span></h5>
+  <div class="aboutus_title">
+    <h1>地理位置 <span>Location</span></h1>
   </div>
   <div class="container">
     <div class="row">
