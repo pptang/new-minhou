@@ -145,6 +145,15 @@ function changeSelectedState(id) {
   });
 }
 
+function toggleMenu() {
+  var $headerBox = $('.header_box');
+  if ($headerBox.hasClass('hidden')) {
+    $headerBox.removeClass('hidden');
+  } else {
+    $headerBox.addClass('hidden');
+  }
+}
+
 function navigate() {
   if (!window.location.hash) {
     goToHomePage();
@@ -172,4 +181,12 @@ function navigate() {
   global.onhashchange = function () {
     navigate();
   }
+  if($(global).width() <=1340) {
+    $('.header_box').addClass("hidden");
+  }
+  $( global ).resize(function() {
+    if($(global).width() <=1340) $('.header_box').addClass("hidden");
+    else $('.header_box').removeClass("hidden");
+  });
+
 })(window);
