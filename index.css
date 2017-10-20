@@ -1,7 +1,8 @@
-body {
-	margin: 0px auto;
-	background-color: #FFFFF0;
+html, body {
+	height: 100%;
+	background-color: #FFFFF0 !important;
 }
+
 .menu_container {
 	width: 70%;
 	display: flex;
@@ -60,9 +61,11 @@ body {
 	font-family: NSimSun;
 	cursor: default;
 }
-#header,.carousel_box, .aboutus_all, .service_project_box, .life_background_box, .location_back, .booking {
-	background-color: #FFFFF0;
+
+.aboutus_all {
+	height: 100%;
 }
+
 .carousel_box {
 	margin: 0px auto;
 	overflow: hidden;
@@ -73,6 +76,11 @@ body {
 	margin: 25px auto;
 	width: 70%;
 }
+
+#mainContent {
+	height: 100%;
+}
+
 .item:before {
 	content: '';
 	position: absolute;
@@ -150,7 +158,7 @@ body {
 	text-decoration: none;
 	font-weight: bold;
 }
-.item_list:hover, .item_link:hover {
+.item_list:hover, .item_link:hover, .selected {
 	text-decoration: none;
 	color: black;
 	background-color: #E0E0E0;

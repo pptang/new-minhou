@@ -155,5 +155,3 @@ const reservePage = `
     </div>
   </form>
 `;
-
-// XXX: CAPCHA
