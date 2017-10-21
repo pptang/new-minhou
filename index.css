@@ -365,6 +365,7 @@ html, body {
 		text-transform: uppercase;
 		border-radius: 4px;
 		top: 35%;
+		cursor: pointer;
 	}
 	.menu {
 		padding: 0.7em 1.2em;
@@ -433,7 +434,14 @@ html, body {
 		height: 200px;
 	}
 }
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 720px) {
+	.logo_container {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 576px) {
 	#header {
 		height: 130px;
 	}
